@@ -1,0 +1,6 @@
+.app-wrapper {
+    display: grid;
+    grid-template: "h h" 60px "n c" 1fr / 2fr 10fr;
+    margin: 0 auto;
+    width: 1200px;
+}
