@@ -2,13 +2,15 @@ import React from 'react';
 
 import styles from './style.module.scss';
 
-const Post = () => {
+const Post = (props) => {
+
     return (
         <div className={styles['item']}>
-            <img className={styles['item__avatar']} src="https://static.wikia.nocookie.net/wolfhound/images/2/28/Luchezar.jpg/revision/latest/scale-to-width-down/340?cb=20130708110509&path-prefix=ru"/>
-            post1
+            <img className={styles['item__avatar']} src="https://www.mann-ivanov-ferber.ru/assets/images/authors/mark-avrelij/mark-avrelij.jpg" alt="#"/>
+            { props.message }
             <div>
-                <span>like</span>
+                <span> Like </span>
+                { props.counter }
             </div>
         </div>
     )

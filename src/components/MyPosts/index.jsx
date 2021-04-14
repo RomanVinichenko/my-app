@@ -4,7 +4,8 @@ import Post from '../Post';
 
 import styles from './style.module.scss';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
     return (
         <div className={styles['content']}>
             <div>
@@ -14,9 +15,9 @@ const MyPosts = () => {
                     <button>Add post</button>
                 </div>
                 <div className={styles['posts']}>
-                    <Post/>
-                    <Post/>
-                    <Post/>
+                    <Post message='Hi, how are you?' counter='15'/>
+                    <Post message='It`s my first post' counter='20'/>
+
                 </div>
             </div>
         </div>
