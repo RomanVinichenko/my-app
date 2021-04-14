@@ -2,9 +2,9 @@ import React from 'react';
 
 import styles from './style.module.scss';
 
-const Dialogs = (props) => {
+const Dialogs = () => {
     return (
-        <div className={styles ['dialogs']}>
+        <div className={styles['dialogs']}>
             <div className="dialogs-items">
                <div className="dialog">
                   Maks
