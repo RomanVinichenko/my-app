@@ -4,28 +4,36 @@ import styles from './style.module.scss';
 
 import {NavLink} from "react-router-dom";
 
+const DialogItem = ({name, id}) => {
+    let path = "/dialogs/" + id;
+    return (
+        <div className={`${styles['dialog']} ${styles['active']}`}>
+        <NavLink to={path}>{name}</NavLink>
+        </div>
+    )
+}
+
+const Message = ({message}) => {
+    return (
+       <div className={styles['message']}>{message}</div>
+    )
+    
+}
+
 const Dialogs = () => {
     return (
         <div className={styles['dialogs']}>
             <div className={styles['dialogsItems']}>
-               <div className={styles['dialog']}>
-               <NavLink to="/dialogs/1">Maks</NavLink>
-               </div>
-               <div className={`${styles['dialog']} ${styles['active']}`}>
-               <NavLink to="/dialogs/2">Olga</NavLink>
-               </div>
-               <div className={styles['dialog']}>
-               <NavLink to="/dialogs/3">Ilya</NavLink>
-               </div>
-               <div className={styles['dialog']}>
-               <NavLink to="/dialogs/4">Ksu</NavLink>
-               </div>
+               <DialogItem name="Mad" id="1"/>
+               <DialogItem name="Olga" id="2"/>
+               <DialogItem name="Victor" id="3"/>
+               <DialogItem name="Jack" id="4"/>
             </div>
             <div className={styles['messages']}>
                <div>
-                 <div className={styles['message']}>React!</div>
-                 <div className={styles['message']}>Html?</div>
-                 <div className={styles['message']}>Css%</div>
+                 <Message message="React?"/>
+                 <Message message="Html%"/>
+                 <Message message="SCSS!"/>                 
                </div>
             </div>
         </div>

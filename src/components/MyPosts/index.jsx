@@ -6,12 +6,12 @@ import styles from './style.module.scss';
 
 const MyPosts = () => {
     return (
-        <div className={styles['content']}>
+        <div className={styles['postsBlock']}>
             <div>
-                my posts
+                <h3>My posts</h3>
                 <div>
-                    <textarea />
-                    <button>Add post</button>
+                    <div><textarea /></div>
+                    <div><button>Add post</button></div>
                 </div>
                 <div className={styles['posts']}>
                     <Post message='Hi, how are you?' counter='15'/>
