@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Post from '../Post';
+import Post from '../Profile/MyPosts/Post';
 
 import styles from './style.module.scss';
 

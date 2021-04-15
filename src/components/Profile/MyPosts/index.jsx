@@ -1,10 +1,20 @@
 import React from 'react';
 
-import Post from '../Post';
+import Post from './Post';
 
 import styles from './style.module.scss';
 
 const MyPosts = () => {
+
+    let posts = [
+        {id: 1, message: 'Have you already log in in my app?', counter: 15},
+        {id: 2, message: 'Who is there?', counter: 16},
+        {id: 3, message: 'Roman', counter: 55},
+        {id: 4, message: 'United', counter: 16}
+    ]
+    let postsElements = posts.map ( p => <Post message={p.message} counter={p.counter}/>)
+
+
     return (
         <div className={styles['postsBlock']}>
             <div>
@@ -14,8 +24,7 @@ const MyPosts = () => {
                     <div><button>Add post</button></div>
                 </div>
                 <div className={styles['posts']}>
-                    <Post message='Hi, how are you?' counter='15'/>
-                    <Post message='It`s my first post' counter='20'/>
+                    { postsElements }
                 </div>
             </div>
         </div>
