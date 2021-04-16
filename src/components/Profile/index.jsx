@@ -8,11 +8,10 @@ import styles from './style.module.scss';
 const Profile = () => {
     return (
         <div>
-        <ProfileInfo/>
-        <MyPosts />
+            <ProfileInfo />
+            <MyPosts />
         </div>
-        
-    )
-}
+    );
+};
 
 export default Profile;

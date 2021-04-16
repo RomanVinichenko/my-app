@@ -2,8 +2,7 @@ import React from 'react';
 
 import styles from './style.module.scss';
 
-const Post = ({message, counter}) => {
-
+const Post = ({ message, counter }) => {
     return (
         <div className={styles['item']}>
             <img
@@ -17,7 +16,7 @@ const Post = ({message, counter}) => {
                 {counter}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Post;
