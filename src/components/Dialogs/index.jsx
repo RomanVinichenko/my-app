@@ -3,12 +3,11 @@ import styles from './style.module.scss';
 import DialogItem from './DialogItem';
 import Message from './Message';
 
-const Dialogs = ({dialogs, messages}) => {
+const Dialogs = ({state}) => {
 
+     let dialogsElements = state.dialogs.map((d) => <DialogItem name={d.name} id={d.id} />);
 
-     let dialogsElements = dialogs.map((d) => <DialogItem name={d.name} id={d.id} />);
-
-     let messagesElements = messages.map((m) => <Message message={m.message} />);
+     let messagesElements = state.messages.map((m) => <Message message={m.message} />);
 
      return (
          <div className={styles['dialogs']}>

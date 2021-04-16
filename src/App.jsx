@@ -9,7 +9,7 @@ import Settings from './components/Settings';
 
 import './App.scss';
 
-const App = ({posts, dialogs, messages}) => {
+const App = ({state}) => {
 
     return (
         <BrowserRouter>
@@ -17,9 +17,12 @@ const App = ({posts, dialogs, messages}) => {
                 <Header />
                 <Nav />
                 <div className="app-wrapper-content">
-                    <Route path="/profile" render={ () => <Profile posts={posts} /> } />
-                    <Route path="/dialogs" render={ () => <Dialogs dialogs={dialogs} messages={messages}/> } />
-                    <Route path="/settings" render={ () => <Settings /> } />
+                    <Route path="/profile"
+                           render={ () => <Profile state={state.profilePage} /> } />
+                    <Route path="/dialogs"
+                           render={ () => <Dialogs state={state.dialogsPage} /> } />
+                    <Route path="/settings"
+                           render={ () => <Settings /> } />
                 </div>
             </div>
         </BrowserRouter>
