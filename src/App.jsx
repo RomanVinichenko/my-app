@@ -9,7 +9,7 @@ import Settings from './components/Settings';
 
 import './App.scss';
 
-const App = ({posts}, {dialogs}, {messages}) => {
+const App = ({posts, dialogs, messages}) => {
 
     return (
         <BrowserRouter>
