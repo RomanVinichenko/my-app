@@ -5,11 +5,12 @@ import ProfileInfo from './ProfileInfo';
 
 import styles from './style.module.scss';
 
-const Profile = () => {
+const Profile = ({posts}) => {
+
     return (
         <div>
             <ProfileInfo />
-            <MyPosts />
+            <MyPosts posts={posts}/>
         </div>
     );
 };
